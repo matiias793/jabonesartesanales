@@ -29,14 +29,15 @@ export default function Galeria() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
           {imagenes.map((imagen, index) => (
             <motion.div
-              key={index}
+              key={`${imagen}-${index}`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.05, duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
               onClick={() => setImagenSeleccionada(imagen)}
-              className="cursor-pointer aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-violet-100 bg-white/50"
+              className="cursor-pointer aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-violet-100 bg-white/50 relative w-full z-0"
+              style={{ minHeight: '150px' }}
             >
               <Image 
                 src={imagen} 
@@ -44,6 +45,11 @@ export default function Galeria() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                loading={index < 4 ? "eager" : "lazy"}
+                priority={index < 4}
+                onError={(e) => {
+                  console.error('Error loading image:', imagen);
+                }}
               />
             </motion.div>
           ))}

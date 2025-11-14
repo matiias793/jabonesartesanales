@@ -17,12 +17,12 @@ export default function SelectorContenido() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center mb-16"
+          className="flex justify-center mb-16 px-2"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg border border-violet-200">
+          <div className="bg-white/80 backdrop-blur-sm rounded-full p-1.5 md:p-2 shadow-lg border border-violet-200 flex gap-1">
             <button
               onClick={() => setVista('beneficios')}
-              className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 ${
+              className={`px-4 py-2 md:px-8 md:py-3 rounded-full font-semibold text-sm md:text-lg transition-all duration-300 whitespace-nowrap ${
                 vista === 'beneficios'
                   ? 'bg-gradient-to-r from-violet-400 to-purple-400 text-white shadow-lg'
                   : 'text-gray-600 hover:text-violet-600'
@@ -32,7 +32,7 @@ export default function SelectorContenido() {
             </button>
             <button
               onClick={() => setVista('propiedades')}
-              className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 ${
+              className={`px-4 py-2 md:px-8 md:py-3 rounded-full font-semibold text-sm md:text-lg transition-all duration-300 whitespace-nowrap ${
                 vista === 'propiedades'
                   ? 'bg-gradient-to-r from-violet-400 to-purple-400 text-white shadow-lg'
                   : 'text-gray-600 hover:text-violet-600'
@@ -56,4 +56,5 @@ export default function SelectorContenido() {
     </section>
   );
 }
+
 
