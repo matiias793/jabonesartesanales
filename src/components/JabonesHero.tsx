@@ -5,38 +5,38 @@ import { motion } from 'framer-motion';
 export default function JabonesHero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background con gradiente suave */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50"></div>
+      {/* Background con gradiente pastel violeta/rosado */}
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-pink-50"></div>
       
       {/* Decoración de burbujas */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-amber-200/30 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-rose-200/30 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-violet-200/30 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-purple-200/30 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 py-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-600 via-orange-600 to-rose-600 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Jabones Artesanales
+            Aceite Esencial de Limón
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Descubre el arte y la ciencia detrás de la elaboración de jabones naturales
+            Descubre sus beneficios y propiedades
           </motion.p>
 
           <motion.div
@@ -46,32 +46,12 @@ export default function JabonesHero() {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <a 
-              href="#procedimiento"
-              className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              href="#contenido"
+              className="px-8 py-4 bg-gradient-to-r from-violet-400 to-purple-400 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              Ver Procedimiento
-            </a>
-            <a 
-              href="#beneficios"
-              className="px-8 py-4 bg-white/80 backdrop-blur-sm text-amber-700 rounded-full font-semibold text-lg border-2 border-amber-300 hover:bg-amber-50 transform hover:scale-105 transition-all duration-300"
-            >
-              Ver Beneficios
+              Explorar
             </a>
           </motion.div>
-        </motion.div>
-
-        {/* Icono decorativo de jabón */}
-        <motion.div
-          className="mt-16"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-        >
-          <div className="inline-block p-6 bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl">
-            <svg className="w-24 h-24 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-            </svg>
-          </div>
         </motion.div>
       </div>
 
@@ -81,11 +61,10 @@ export default function JabonesHero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
       >
-        <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </motion.div>
     </section>
   );
 }
-
