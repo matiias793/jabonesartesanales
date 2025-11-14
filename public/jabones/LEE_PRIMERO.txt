@@ -1,0 +1,22 @@
+📸 INSTRUCCIONES PARA AGREGAR IMÁGENES
+
+1. Coloca tus imágenes en esta carpeta (public/jabones/)
+
+2. Nombres sugeridos para las imágenes:
+   - ingredientes.jpg (o .png)
+   - sosa.jpg
+   - mezcla.jpg
+   - aditivos.jpg
+   - moldeo.jpg
+   - resultado.jpg
+
+3. Formatos soportados: .jpg, .jpeg, .png, .webp
+
+4. Después de agregar las imágenes, edita el archivo:
+   src/components/Galeria.tsx
+   
+   Y reemplaza los valores "null" con las rutas de tus imágenes.
+   Ejemplo: imagen: "/jabones/ingredientes.jpg"
+
+¡Listo! Las imágenes aparecerán automáticamente en la galería.
+
