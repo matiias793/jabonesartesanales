@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 // Imágenes del proceso
 const imagenes = [
@@ -126,10 +127,12 @@ export default function Galeria() {
             >
               {/* Imagen */}
               <div className="relative h-64 bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center overflow-hidden">
-                <img 
+                <Image 
                   src={imagen.imagen} 
                   alt={imagen.titulo}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               
@@ -160,11 +163,15 @@ export default function Galeria() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mb-4 overflow-hidden">
-                <img 
-                  src={imagenes.find(img => img.id === imagenSeleccionada)?.imagen || ''} 
-                  alt={imagenes.find(img => img.id === imagenSeleccionada)?.titulo}
-                  className="w-full h-full object-contain"
-                />
+                {imagenes.find(img => img.id === imagenSeleccionada)?.imagen && (
+                  <Image 
+                    src={imagenes.find(img => img.id === imagenSeleccionada)!.imagen} 
+                    alt={imagenes.find(img => img.id === imagenSeleccionada)?.titulo || ''}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                  />
+                )}
               </div>
               <h3 className="text-2xl font-bold mb-2">
                 {imagenes.find(img => img.id === imagenSeleccionada)?.titulo}
