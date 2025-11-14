@@ -26,7 +26,7 @@ export default function Galeria() {
   return (
     <section id="galeria" className="py-20 px-4 bg-gradient-to-b from-purple-50/50 to-pink-50/50">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
           {imagenes.map((imagen, index) => (
             <motion.div
               key={index}

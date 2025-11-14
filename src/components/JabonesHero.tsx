@@ -31,12 +31,21 @@ export default function JabonesHero() {
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-600 mb-4 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             Descubre sus beneficios y propiedades
+          </motion.p>
+          
+          <motion.p 
+            className="text-lg text-violet-400 font-medium mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            Autora de la muestra: Lucia Friedrich
           </motion.p>
 
           <motion.div
